@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TentativeC971.MainPage"
+             Title="My Academic Terms">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Term"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid RowDefinitions="*,*,75"
+          RowSpacing="5">
+
+        <Border BackgroundColor="WhiteSmoke"
+                Padding="0"
+                HeightRequest="200"
+                Grid.Row="0"
+                Margin="5">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15"/>
+            </Border.StrokeShape>
+            <Border.Shadow>
+                <Shadow Brush="black"
+                        Offset="5,5"
+                        Radius="10"
+                        Opacity="0.6"/>
+            </Border.Shadow>
+
+            <VerticalStackLayout>
+                <FlexLayout BackgroundColor="{StaticResource Primary}"
+                            Padding="20,10,20,10"
+                            JustifyContent="SpaceBetween">
+                    <Label Text="Term 1"
+                           Style="{StaticResource SubHeadline}"
+                           TextColor="White"
+                           VerticalTextAlignment="Center"/>
+                    <HorizontalStackLayout>
+                        <Border Padding="5,0,5,0">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <DatePicker TextColor="White"/>
+                        </Border>
+                        <Label Text=" - "
+                               TextColor="White"
+                               FontSize="24"
+                               VerticalTextAlignment="Center"/>
+                        <Border Padding="5,0,5,0">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <DatePicker TextColor="White"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                </FlexLayout>
+                <HorizontalStackLayout Padding="10">
+                    <Border Padding="5,0,5,0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Label Text="Course One"/>
+                    </Border>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+
+
+        <Border BackgroundColor="WhiteSmoke"
+                Padding="0"
+                HeightRequest="200"
+                Grid.Row="1"
+                Margin="5">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15"/>
+            </Border.StrokeShape>
+            <Border.Shadow>
+                <Shadow Brush="black"
+                        Offset="5,5"
+                        Radius="10"
+                        Opacity="0.6"/>
+            </Border.Shadow>
+
+            <VerticalStackLayout>
+                <FlexLayout BackgroundColor="{StaticResource Primary}"
+                            Padding="20,10,20,10"
+                            JustifyContent="SpaceBetween">
+                    <Label Text="Term 1"
+                           Style="{StaticResource SubHeadline}"
+                           TextColor="White"
+                           VerticalTextAlignment="Center"/>
+                    <Border Padding="5,0,5,0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <DatePicker TextColor="White"/>
+                    </Border>
+
+                </FlexLayout>
+                <HorizontalStackLayout Padding="10">
+                    <Label Text="Hellow"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+        
+        
+        
+        <Button Text="Useless Button"
+                Grid.Row="2"
+                Margin="5"/>
+    </Grid>
+
+</ContentPage>
