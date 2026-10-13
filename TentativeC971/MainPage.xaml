@@ -2,17 +2,19 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:TentativeC971"
+             xmlns:viewmodels="clr-namespace:TentativeC971"
              x:Class="TentativeC971.MainPage"
+             x:DataType="viewmodels:MainViewModel"
              Title="My Academic Terms">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add Term"/>
     </ContentPage.ToolbarItems>
 
-    <Grid RowDefinitions="*,*,75"
+    <Grid RowDefinitions="*,75"
           RowSpacing="5">
 
-        <CollectionView>
+        <CollectionView ItemsSource="{Binding Terms}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type model:Term}">
                     <Border BackgroundColor="WhiteSmoke"
@@ -34,7 +36,7 @@
                             <FlexLayout BackgroundColor="{StaticResource Primary}"
                                         Padding="20,10,20,10"
                                         JustifyContent="SpaceBetween">
-                                <Label Text="Term 1"
+                                <Label Text="{Binding Name}"
                                        Style="{StaticResource SubHeadline}"
                                        TextColor="White"
                                        VerticalTextAlignment="Center"/>
@@ -73,44 +75,6 @@
 
         </CollectionView>
         
-
-
-        <Border BackgroundColor="WhiteSmoke"
-                Padding="0"
-                HeightRequest="200"
-                Grid.Row="1"
-                Margin="5">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="15"/>
-            </Border.StrokeShape>
-            <Border.Shadow>
-                <Shadow Brush="black"
-                        Offset="5,5"
-                        Radius="10"
-                        Opacity="0.6"/>
-            </Border.Shadow>
-
-            <VerticalStackLayout>
-                <FlexLayout BackgroundColor="{StaticResource Primary}"
-                            Padding="20,10,20,10"
-                            JustifyContent="SpaceBetween">
-                    <Label Text="Term 2"
-                           Style="{StaticResource SubHeadline}"
-                           TextColor="White"
-                           VerticalTextAlignment="Center"/>
-                    <Border Padding="5,0,5,0">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="10"/>
-                        </Border.StrokeShape>
-                        <DatePicker TextColor="White"/>
-                    </Border>
-
-                </FlexLayout>
-                <HorizontalStackLayout Padding="10">
-                    <Label Text="Hellow"/>
-                </HorizontalStackLayout>
-            </VerticalStackLayout>
-        </Border>
         
         
         
