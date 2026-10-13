@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\only1\\source\\repos\\TentativeC971\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF534BA1-C3FF-4652-96DE-F287EEB7411B}|TentativeC971\\TentativeC971.csproj|c:\\users\\only1\\source\\repos\\tentativec971\\tentativec971\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FF534BA1-C3FF-4652-96DE-F287EEB7411B}|TentativeC971\\TentativeC971.csproj|solutionrelative:tentativec971\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7C38EA4A-EB12-A24A-DC23-94C93ABFF435}|TentativeC971\\TentativeC971.csproj|c:\\users\\only1\\source\\repos\\tentativec971\\tentativec971\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7C38EA4A-EB12-A24A-DC23-94C93ABFF435}|TentativeC971\\TentativeC971.csproj|solutionrelative:tentativec971\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF534BA1-C3FF-4652-96DE-F287EEB7411B}|TentativeC971\\TentativeC971.csproj|c:\\users\\only1\\source\\repos\\tentativec971\\tentativec971\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF534BA1-C3FF-4652-96DE-F287EEB7411B}|TentativeC971\\TentativeC971.csproj|solutionrelative:tentativec971\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C38EA4A-EB12-A24A-DC23-94C93ABFF435}|TentativeC971\\TentativeC971.csproj|c:\\users\\only1\\source\\repos\\tentativec971\\tentativec971\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C38EA4A-EB12-A24A-DC23-94C93ABFF435}|TentativeC971\\TentativeC971.csproj|solutionrelative:tentativec971\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF534BA1-C3FF-4652-96DE-F287EEB7411B}|TentativeC971\\TentativeC971.csproj|c:\\users\\only1\\source\\repos\\tentativec971\\tentativec971\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF534BA1-C3FF-4652-96DE-F287EEB7411B}|TentativeC971\\TentativeC971.csproj|solutionrelative:tentativec971\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C38EA4A-EB12-A24A-DC23-94C93ABFF435}|TentativeC971\\TentativeC971.csproj|c:\\users\\only1\\source\\repos\\tentativec971\\tentativec971\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C38EA4A-EB12-A24A-DC23-94C93ABFF435}|TentativeC971\\TentativeC971.csproj|solutionrelative:tentativec971\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C38EA4A-EB12-A24A-DC23-94C93ABFF435}|TentativeC971\\TentativeC971.csproj|c:\\users\\only1\\source\\repos\\tentativec971\\tentativec971\\term.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C38EA4A-EB12-A24A-DC23-94C93ABFF435}|TentativeC971\\TentativeC971.csproj|solutionrelative:tentativec971\\term.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +50,7 @@
               "RelativeDocumentMoniker": "TentativeC971\\MainPage.xaml",
               "ToolTip": "C:\\Users\\only1\\source\\repos\\TentativeC971\\TentativeC971\\MainPage.xaml",
               "RelativeToolTip": "TentativeC971\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwBIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-10-12T15:55:27.083Z",
               "IsPinned": true,
@@ -60,19 +64,32 @@
               "RelativeDocumentMoniker": "TentativeC971\\MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\only1\\source\\repos\\TentativeC971\\TentativeC971\\MainPage.xaml.cs",
               "RelativeToolTip": "TentativeC971\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-12T15:55:31.908Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Term.cs",
+              "DocumentMoniker": "C:\\Users\\only1\\source\\repos\\TentativeC971\\TentativeC971\\Term.cs",
+              "RelativeDocumentMoniker": "TentativeC971\\Term.cs",
+              "ToolTip": "C:\\Users\\only1\\source\\repos\\TentativeC971\\TentativeC971\\Term.cs",
+              "RelativeToolTip": "TentativeC971\\Term.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T02:34:37.427Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         },
