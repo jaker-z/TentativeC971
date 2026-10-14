@@ -8,7 +8,7 @@
              Title="My Academic Terms">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Term"/>
+        <ToolbarItem Text="+ Add Term" Command="{Binding AddTermCommand}"/>
     </ContentPage.ToolbarItems>
 
     <Grid RowDefinitions="*,75"
@@ -19,9 +19,8 @@
                 <DataTemplate x:DataType="{x:Type model:Term}">
                     <Border BackgroundColor="WhiteSmoke"
                             Padding="0"
-                            HeightRequest="200"
                             Grid.Row="0"
-                            Margin="5">
+                            Margin="5,15,5,15">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="15"/>
                         </Border.StrokeShape>
@@ -34,39 +33,47 @@
 
                         <VerticalStackLayout>
                             <FlexLayout BackgroundColor="{StaticResource Primary}"
-                                        Padding="20,10,20,10"
+                                        Padding="30,10,20,10"
                                         JustifyContent="SpaceBetween">
                                 <Label Text="{Binding Name}"
                                        Style="{StaticResource SubHeadline}"
                                        TextColor="White"
                                        VerticalTextAlignment="Center"/>
+                                <Button Text="+ Add Course"
+                                        BackgroundColor="{StaticResource Secondary}"
+                                        TextColor="{StaticResource SecondaryDarkText}"
+                                        
+                                        CornerRadius="50"/>
+                            </FlexLayout>
+                           
+                            <VerticalStackLayout BindableLayout.ItemsSource="{Binding Courses}" 
+                                                 Padding="10"
+                                                 Spacing="8">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate x:DataType="model:Course">
+                                        <Border Padding="10,5,10,5">
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="10"/>
+                                            </Border.StrokeShape>
+                                            <Label Text="{Binding Name}"/>
+                                        </Border>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </VerticalStackLayout>
+                            
+                            <FlexLayout BackgroundColor="{StaticResource Primary}"  
+                                        JustifyContent="Center">
                                 <HorizontalStackLayout>
-                                    <Border Padding="5,0,5,0">
-                                        <Border.StrokeShape>
-                                            <RoundRectangle CornerRadius="10"/>
-                                        </Border.StrokeShape>
-                                        <DatePicker TextColor="White"/>
-                                    </Border>
+                                    <DatePicker TextColor="White"/>
                                     <Label Text=" - "
                                            TextColor="White"
                                            FontSize="24"
                                            VerticalTextAlignment="Center"/>
-                                    <Border Padding="5,0,5,0">
-                                        <Border.StrokeShape>
-                                            <RoundRectangle CornerRadius="10"/>
-                                        </Border.StrokeShape>
-                                        <DatePicker TextColor="White"/>
-                                    </Border>
+                                    <DatePicker TextColor="White"/>
                                 </HorizontalStackLayout>
                             </FlexLayout>
-                            <HorizontalStackLayout Padding="10">
-                                <Border Padding="5,0,5,0">
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="10"/>
-                                    </Border.StrokeShape>
-                                    <Label Text="Course One"/>
-                                </Border>
-                            </HorizontalStackLayout>
+                            
+                            
                         </VerticalStackLayout>
                     </Border>
                 </DataTemplate>

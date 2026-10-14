@@ -12,17 +12,24 @@ namespace TentativeC971
         public string Name { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-
         public List<Course> Courses { get; set; }
 
         public Term()
         {
             Name = "Term " + Id.ToString();
+            Courses = new List<Course>();
         }
 
-        public Term(string name)
+        public Term(int id)
         {
-            Name = name;
+            Id = id;
+            Name = "Term " + Id.ToString();
+            Courses = new List<Course>();
+        }
+
+        public void AddCourse(Course course)
+        {
+            Courses.Add(course);
         }
         
     }

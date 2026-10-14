@@ -9,9 +9,9 @@ namespace TentativeC971
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        string Name { get; set; }
-        string Description { get; set; }
-        DateTime StartDate { get; set; }
-        DateTime EndDate { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
     }
 }
