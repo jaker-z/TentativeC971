@@ -20,6 +20,12 @@ namespace TentativeC971
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<MainViewModel>();
 
+            builder.Services.AddTransient<TermDetailsPage>();
+            builder.Services.AddTransient<TermDetailsViewModel>();
+
+            builder.Services.AddTransient<CourseDetailsPage>();
+            builder.Services.AddTransient<CourseDetailsViewModel>();
+
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif

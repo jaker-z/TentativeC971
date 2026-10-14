@@ -17,9 +17,43 @@ namespace TentativeC971
         {
             string termName = await Shell.Current.DisplayPromptAsync("Enter Term Name: ", "What will your term name be called?");
 
-            Term newTerm = new Term(7);
-            Terms.Add(newTerm);
+            if (termName != string.Empty)
+            {
+                Term newTerm = new Term()
+                {
+                    Name = termName
+                };
+
+                Terms.Add(newTerm);
+            }
         }
+
+        [RelayCommand]
+        public async Task AddCourse(Term selectedTerm)
+        {
+            string courseName = await Shell.Current.DisplayPromptAsync("Enter Course Name: ", "What will you name your course?");
+            
+            if (courseName != string.Empty)
+            {
+                Course newCourse = new Course()
+                {
+                    Name = courseName
+                };
+
+                selectedTerm.AddCourse(newCourse);
+            }
+        }
+
+        [RelayCommand]
+        public async Task GoToTermDetails(Term selectedTerm)
+        {
+            await Shell.Current.GoToAsync(nameof(TermDetailsPage), true,
+                new Dictionary<string, object>
+                {
+                    {"Term", selectedTerm }
+                });
+        }
+
 
         public MainViewModel()
         {

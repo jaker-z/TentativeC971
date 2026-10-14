@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using SQLite;
+
 
 namespace TentativeC971
 {
@@ -12,19 +14,21 @@ namespace TentativeC971
         public string Name { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public List<Course> Courses { get; set; }
+        //public List<Course> Courses { get; set; }
+
+        public ObservableCollection<Course> Courses { get; set; } = new();
 
         public Term()
         {
             Name = "Term " + Id.ToString();
-            Courses = new List<Course>();
+            //Courses = new List<Course>();
         }
 
         public Term(int id)
         {
             Id = id;
             Name = "Term " + Id.ToString();
-            Courses = new List<Course>();
+            //Courses = new List<Course>();
         }
 
         public void AddCourse(Course course)
