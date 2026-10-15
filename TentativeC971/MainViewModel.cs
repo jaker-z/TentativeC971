@@ -8,41 +8,8 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace TentativeC971
 {
-    public partial class MainViewModel : ObservableObject
+    public partial class MainViewModel : BaseViewModel
     {
-        public ObservableCollection<Term> Terms { get; set; } = new();
-
-        [RelayCommand]
-        public async Task AddTerm()
-        {
-            string termName = await Shell.Current.DisplayPromptAsync("Enter Term Name: ", "What will your term name be called?");
-
-            if (termName != string.Empty)
-            {
-                Term newTerm = new Term()
-                {
-                    Name = termName
-                };
-
-                Terms.Add(newTerm);
-            }
-        }
-
-        [RelayCommand]
-        public async Task AddCourse(Term selectedTerm)
-        {
-            string courseName = await Shell.Current.DisplayPromptAsync("Enter Course Name: ", "What will you name your course?");
-            
-            if (courseName != string.Empty)
-            {
-                Course newCourse = new Course()
-                {
-                    Name = courseName
-                };
-
-                selectedTerm.AddCourse(newCourse);
-            }
-        }
 
         [RelayCommand]
         public async Task GoToTermDetails(Term selectedTerm)

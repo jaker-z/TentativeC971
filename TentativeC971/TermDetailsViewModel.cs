@@ -6,7 +6,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 namespace TentativeC971
 {
     [QueryProperty(nameof(ThisTerm), "Term")]
-    public partial class TermDetailsViewModel : ObservableObject
+    public partial class TermDetailsViewModel : BaseViewModel
     {
         [ObservableProperty]
         string welcomeText = "Welcome to the Term Details!";

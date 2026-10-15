@@ -60,6 +60,10 @@
                                             <Border.StrokeShape>
                                                 <RoundRectangle CornerRadius="10"/>
                                             </Border.StrokeShape>
+                                            <Border.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=GoToCourseDetailsCommand}"
+                                                  CommandParameter="{Binding .}"/>
+                                            </Border.GestureRecognizers>
                                             <Label Text="{Binding Name}"/>
                                         </Border>
                                     </DataTemplate>
