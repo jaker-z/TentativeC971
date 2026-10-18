@@ -1,0 +1,52 @@
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" 
+           xmlns:model="clr-namespace:TentativeC971"
+           xmlns:viewmodel="clr-namespace:TentativeC971"
+           x:TypeArguments="model:Term"
+           x:Class="TentativeC971.TermPopup"
+           x:DataType="viewmodel:TermPopup"
+           WidthRequest="350">
+
+    <VerticalStackLayout Spacing="10">
+        
+        <Label 
+            Text="Add A Term"
+            Style="{StaticResource SubHeadline}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <HorizontalStackLayout>
+            <Label Text="Name: "/>
+            <Entry x:Name="TermName"/>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout>
+            <Label Text="Pick a Start Date: "
+                   VerticalOptions="Center"/>
+            <DatePicker x:Name="StartDatePicker" 
+                        VerticalOptions="Center"
+                        FontSize="18"
+                        TextColor="{StaticResource Tertiary}"/>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout>
+            <Label Text="Pick an End Date: "
+                   VerticalOptions="Center"/>
+            <DatePicker x:Name="EndDatePicker" 
+                        VerticalOptions="Center"
+                        FontSize="18"
+                        TextColor="{StaticResource Tertiary}"/>
+        </HorizontalStackLayout>
+
+        <Label x:Name="TermLabel"
+               Text="Three"/>
+
+        <Button Text="Looks Good"
+                Margin="0,20,0,0"
+                Clicked="OnButtonClicked"/>
+
+
+    </VerticalStackLayout>
+    
+</toolkit:Popup>

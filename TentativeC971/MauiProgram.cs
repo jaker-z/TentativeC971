@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Services;
 using Microsoft.Extensions.Logging;
 
 namespace TentativeC971
@@ -25,6 +26,9 @@ namespace TentativeC971
 
             builder.Services.AddTransient<CourseDetailsPage>();
             builder.Services.AddTransient<CourseDetailsViewModel>();
+
+            builder.Services.AddSingleton<IPopupService, PopupService>();
+            builder.Services.AddTransientPopup<TermPopup, TermPopupViewModel>();
 
 #if DEBUG
     		builder.Logging.AddDebug();

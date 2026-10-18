@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Maui.Extensions;
+using CommunityToolkit.Maui;
 
 namespace TentativeC971
 {

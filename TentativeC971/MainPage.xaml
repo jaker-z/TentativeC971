@@ -8,13 +8,21 @@
              Title="My Academic Terms">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+ Add Term" Command="{Binding AddTermCommand}"/>
+        <ToolbarItem Text="Refresh">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource Glyph="↻"
+                                 Color="Black"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
 
     <Grid RowDefinitions="*,75"
-          RowSpacing="5">
+          RowSpacing="5"
+          ColumnDefinitions="*,*"
+          ColumnSpacing="5">
 
-        <CollectionView ItemsSource="{Binding Terms}">
+        <CollectionView ItemsSource="{Binding Terms}"
+                        Grid.ColumnSpan="2">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type model:Term}">
                     <Border BackgroundColor="WhiteSmoke"
@@ -24,12 +32,7 @@
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="15"/>
                         </Border.StrokeShape>
-                        <Border.Shadow>
-                            <Shadow Brush="black"
-                                    Offset="5,5"
-                                    Radius="10"
-                                    Opacity="0.6"/>
-                        </Border.Shadow>
+
                         <Border.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=GoToTermDetailsCommand}"
                                                   CommandParameter="{Binding .}"/>
@@ -70,15 +73,20 @@
                                 </BindableLayout.ItemTemplate>
                             </VerticalStackLayout>
                             
-                            <FlexLayout BackgroundColor="{StaticResource Primary}"
+                            <FlexLayout BackgroundColor="{StaticResource Secondary}"
                                         JustifyContent="Center">
                                 <HorizontalStackLayout>
-                                    <DatePicker TextColor="white"/>
-                                    <Label Text=" - "
-                                           TextColor="white"
-                                           FontSize="24"
+                                    <Label Text="{Binding StartDate}"
+                                           TextColor="{StaticResource SecondaryDarkText}"
                                            VerticalTextAlignment="Center"/>
-                                    <DatePicker TextColor="white"/>
+                                    <Label Text="-"
+                                           TextColor="{StaticResource SecondaryDarkText}"
+                                           
+                                           Margin="10"
+                                           VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding EndDate}"
+                                           TextColor="{StaticResource SecondaryDarkText}"
+                                           VerticalTextAlignment="Center"/>
                                 </HorizontalStackLayout>
                             </FlexLayout>
                             
@@ -90,12 +98,21 @@
             </CollectionView.ItemTemplate>
 
         </CollectionView>
-        
-        
-        
-        
-        <Button Text="Useless Button"
+
+
+        <Button Text="Edit Terms"
+                BackgroundColor="{StaticResource Secondary}"
+                TextColor="{StaticResource SecondaryDarkText}"
                 Grid.Row="2"
+                Grid.Column="0"
+                Margin="5"/>
+
+        <Button Text="Add Term"
+                Command="{Binding AddTermCommand}"
+                BackgroundColor="{StaticResource Secondary}"
+                TextColor="{StaticResource SecondaryDarkText}"
+                Grid.Row="2"
+                Grid.Column="1"
                 Margin="5"/>
     </Grid>
 

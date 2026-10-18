@@ -1,3 +1,10 @@
 <Solution>
-  <Project Path="TentativeC971/TentativeC971.csproj" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM32" />
+  </Configurations>
+  <Project Path="TentativeC971/TentativeC971.csproj">
+    <Platform Solution="*|ARM32" Project="ARM32" />
+    <Deploy Solution="*|ARM32" />
+  </Project>
 </Solution>

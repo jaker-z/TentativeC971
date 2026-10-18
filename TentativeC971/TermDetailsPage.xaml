@@ -60,13 +60,16 @@
         </CollectionView>
         
         <Button Text="Edit Term"
-                Grid.Row="2"
-                Margin="10,0,0,0"/>
-        <Button Text="Delete Term"
+                Command="{Binding EditTermCommand}"
+                CommandParameter="{Binding ThisTerm}"
                 Grid.Row="2"
                 Grid.Column="1"
-                BackgroundColor="red"
                 Margin="0,0,10,0"/>
+        <Button Text="Delete Term"
+                Grid.Row="2"
+                Grid.Column="0"
+                BackgroundColor="red"
+                Margin="10,0,0,0"/>
     </Grid>
 
 
