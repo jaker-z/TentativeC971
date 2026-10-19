@@ -26,54 +26,7 @@ namespace TentativeC971
 
         public MainViewModel()
         {
-            Term oneTerm = new Term(1);
-            Term anotherTerm = new Term(2);
-            Term lastTerm = new Term(3);
 
-            Course course1 = new Course()
-            {
-                Id = 6,
-                Name = "C971 Mobile App Development",
-                Description = "Some kind of class where you make apps but on mobile devices."
-            };
-
-            Course course2 = new Course()
-            {
-                Id = 7,
-                Name = "D282 Auror Attunement",
-                Description = "Learn how to fine tune your Auror skills. Additional skills on hold."
-            };
-
-            Course course3 = new Course()
-            {
-                Id = 8,
-                Name = "B101 Defense Against the Dark Arts",
-                Description = "Harry Potter must not return to Hogwarts this year! The chamber of secrets has been opened."
-            };
-
-            Course course4 = new Course()
-            {
-                Id = 9,
-                Name = "C671 Divination",
-                Description = "Fine boy, boy for sale. He's going cheap, only seven guineas."
-            };
-
-            oneTerm.AddCourse(course1);
-            oneTerm.AddCourse(course2);
-            oneTerm.AddCourse(course3);
-            oneTerm.AddCourse(course4);
-            oneTerm.AddCourse(course2);
-            oneTerm.AddCourse(course3);
-
-            anotherTerm.AddCourse(course3);
-            anotherTerm.AddCourse(course4);
-
-            lastTerm.AddCourse(course1);
-            lastTerm.AddCourse(course4);
-
-            Terms.Add(oneTerm);
-            Terms.Add(anotherTerm);
-            Terms.Add(lastTerm);
         }
     }
 }

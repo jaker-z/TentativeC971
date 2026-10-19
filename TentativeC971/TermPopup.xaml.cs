@@ -18,6 +18,7 @@ public partial class TermPopup : Popup<Term>
 		thisTerm = term;
 		TermLabel.Text = thisTerm.Name;
 		TermName.Placeholder = thisTerm.Name;
+		TermName.Text = thisTerm.Name;
 		StartDatePicker.Date = thisTerm.StartDate.ToDateTime(TimeOnly.MinValue);
 		EndDatePicker.Date = thisTerm.EndDate.ToDateTime(TimeOnly.MinValue);
     }
@@ -39,7 +40,9 @@ public partial class TermPopup : Popup<Term>
 			EndDate = end
 		};
 
-		await CloseAsync(thisTerm);
+        await Shell.Current.DisplayAlertAsync("CAUTION", $"{thisTerm.Name}", "Okay");
+
+        await CloseAsync(thisTerm);
     }
 
 }
